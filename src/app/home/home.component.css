@@ -1,0 +1,285 @@
+@keyframes constelation {
+  0% {stroke-dashoffset: 4000px}
+  20% {stroke-dashoffset: 4000px}
+  100% {stroke-dashoffset: 0}
+}
+@keyframes first-title-animation {
+  0% {opacity: 0}
+  10% {opacity: 1}
+  100% {opacity: 1}
+}
+@keyframes second-title-animation {
+  0% {opacity: 0}
+  44% {opacity: 1}
+  100% {opacity: 1}
+}
+@keyframes third-title-animation {
+  0% {opacity: 0}
+  66% {opacity: 1}
+  100% {opacity: 1}
+}
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+@keyframes constelation-star {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+@keyframes icon-animation {
+  0% {opacity: 0}
+  45% {opacity: 1}
+  50% {opacity: 1}
+  98% {opacity: 0}
+  100% {opacity: 0}
+}
+@keyframes imageShowed {
+  0% {opacity:0}
+  74% {opacity: 0}
+  100% {opacity: 1}
+}
+@keyframes hideConstelation {
+  0% {opacity: 1}
+  93% {opacity: 1}
+  100% {opacity: 0};
+}
+circle:nth-of-type(6n+1){
+  fill:#CB4335;
+}
+circle:nth-of-type(6n+2){
+  fill:#1B4F72;
+}
+circle:nth-of-type(6n+3){
+  fill:#F4D03F;
+}
+circle:nth-of-type(6n+4){
+  fill:#229954;
+}
+circle:nth-of-type(6n+5){
+  fill:white;
+}
+polyline {
+  stroke-width: 1.8;
+}
+polyline:nth-of-type(1) {
+  stroke: #CB4335;
+}
+polyline:nth-of-type(2){
+  stroke: #1B4F72;
+}
+polyline:nth-of-type(3){
+  stroke: #F4D03F;
+}
+polyline:nth-of-type(4){
+  stroke: #229954;
+}
+polyline:nth-of-type(5){
+  stroke: #CB4335;
+}
+polyline:nth-of-type(6){
+  stroke: white;
+}
+polyline:nth-of-type(7){
+  stroke: #633974;
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  background-color: black;
+}
+.container-fluid{
+  font-size: 8px;
+  max-height: 80vh;
+  overflow: scroll;
+}
+.cls-1 {
+  opacity: 0;
+  -moz-animation: constelation-star 3s;
+  animation: constelation-star 3s;
+  animation-fill-mode: forwards;
+}
+.constelation-wrapper {
+  opacity: 1;
+  animation: hideConstelation 6s linear;
+  animation-fill-mode: forwards;
+}
+.constelation-even, .constelation-odd, .constelation {
+  stroke-dasharray: 4000px;
+  fill: transparent;
+}
+.constelation {
+  animation: constelation 8s linear;
+  animation-fill-mode: forwards;
+}
+
+.constelation-line {
+  stroke-width: 0.5;
+}
+
+.first-title, .second-title {
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.8em;
+  width: 98%;
+  display: inline-block;
+  margin: 0;
+}
+.first-title {
+  font-size: 1.9em;
+}
+.second-title {
+  font-size: 2.4em;
+}
+.first-title span {
+  font-size:2em;
+}
+.first-title span span{
+  font-size: inherit;
+}
+.first-title span span:nth-child(1){
+  font-size: inherit;
+  color: #CB4335;
+}
+.first-title span span:nth-child(2){
+  font-size: inherit;
+  color: #1B4F72;
+}
+.first-title span span:nth-child(3){
+  font-size: inherit;
+  color: #F4D03F;
+}
+
+.main-header {
+  position: relative;
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+  margin: 0 auto;
+}
+#after-animation {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  transform: translateY(0);
+}
+
+/* Main Image Properties */
+.image-canvas {
+  background: transparent;
+  position: absolute;
+}
+.mainImage {
+  height: 80vw;
+  background-color: transparent;
+  position: relative;
+}
+
+#image {
+  opacity: 0;
+  animation: imageShowed 6s linear;
+  animation-fill-mode: forwards;
+}
+.useless-mask {
+  height: 100%;
+  width: 100vw;
+}
+
+.image{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+/* End of Main Image Properties*/
+
+/* Text Properties*/
+
+.fadeOut {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+}
+.fadeIn {
+  position: absolute;
+}
+.next-icon {
+  width: 5em;
+  height: 100%;
+}
+.icon-wrapper {
+  height: 4em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 90%;
+  overflow: hidden;
+}
+.icon-wrapper:hover {
+  cursor: pointer;
+}
+.icon-animate {
+  animation: icon-animation 4s infinite;
+}
+.introduction {
+  height: 80vh;
+}
+.animated-text {
+  text-align: center;
+}
+.animated-text h3 {
+  display: block;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: white;
+  transform: translateY(50%);
+}
+.about-us {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  padding-top: 3em;
+}
+.about-us p {
+  width: 80%;
+  display: inline-block;
+  text-align: left;
+  font-size: 1.3em;
+  column-count: 2;
+  column-gap: 1em;
+  column-width: 3px;
+}
+/* End Of Text Properties*/
+
+@media screen and (min-width: 1200px) {
+  polyline {
+    stroke-width: 1.8;
+  }
+  .first-title span {
+    font-size:2.3em;
+  }
+  .mainImage {
+    height: 40vw;
+    float: left;
+  }
+  .first-title, .second-title {
+    width: 60%;
+  }
+  .third-animated{
+    padding-top: 20%;
+  }
+  .container-fluid{
+    font-size: 12px;
+    max-height: 100vh;
+    overflow: visible;
+  }
+  .useless-mask {
+    width: 50%;
+  }
+}

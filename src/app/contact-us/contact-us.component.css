@@ -1,0 +1,82 @@
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+.container-fluid {
+}
+canvas {
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  background-color: black;
+}
+.contact-form{
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  width: 80%;
+  display: inline-block;
+  position: relative;
+  padding: 2em;
+  color: #006002;
+  border-radius: 8px;
+  border-bottom: none;
+}
+.form-group {
+  text-align: left;
+}
+.error {
+  color: #970101;
+  font-size: 0.6em;
+  animation: shake 200ms linear;
+}
+.row {
+  text-align: center;
+}
+.form-control {
+  font-size: 0.8em;
+  width: 90%;
+  margin: 0.6em 0 0 0;
+  border-radius: 0;
+  border: 1px solid #006002;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+}
+.form-wrapper {
+  text-align: center;
+}
+.description {
+  width: 90%;
+  margin: 0.6em 0 0 0;
+  height: 6em;
+  font-size: 0.8em!important;
+  word-wrap: break-word;
+  word-break: keep-all;
+  border: 1px solid #006002;
+}
+.submit-button {
+  padding: 0.4em;
+  border-radius: 6px;
+  border: 1px solid #006002;
+  background-color: #006002;
+  color: white;
+}
+.submit-button i {
+  margin-right: 4px;
+}
+.submit-button:hover{
+  cursor: pointer;
+}

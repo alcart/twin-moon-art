@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+/*!
+ * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=BioRhyme');
+
+ html, body, head {
+   background-color: transparent;
+   font-family: 'Bellefair', serif;
+ }
+body {
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+}

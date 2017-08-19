@@ -1,0 +1,64 @@
+<canvas class="background-canvas"></canvas>
+<div class="container-fluid">
+  <div [@fadeOut]='start_animation' [style.height]="main_height" [style.display]="main_display"
+  (@fadeOut.done)="showAnimation($event)" class="introduction row" style="text-align: center;position:relative">
+    <div class="main-header">
+      <h1 class="first-title">We are
+        <span>Twin Moon <span>A</span><span>R</span><span>T</span>
+        </span>
+      </h1>
+      <h2 class="second-title">A Company made by Artists for Artists</h2>
+    </div>
+    <div (mouseenter)="changeIconAnimation()" (mouseleave)="changeIconAnimation()"
+     [ngClass]="{'icon-animate': iconOnHover}" class="icon-wrapper">
+      <!-- <img class="next-icon" (click)="startAnimation()" src="assets/images/misc/play-button.png" style="filter: invert(1)" />
+      <img class="next-icon" (click)="skipAnimation()" src="assets/images/misc/close.png" style="filter: invert(1)" /> -->
+    </div>
+  </div>
+  <div [style.display]="show_animation" class="content row">
+    <div class='mainImage col-md-6'>
+      <div id="useless-mask" class="useless-mask">
+        <svg id="Layer_2"  class="constelation-wrapper image" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800"><defs><style>.cls-1{fill:#fff;}</style></defs><title>estrellas para la web done</title><circle class="cls-1" cx="209.15" cy="171.4" r="4"/>
+        <circle class="cls-1" cx="221.17" cy="260.83" r="4" /><circle class="cls-1" cx="234.5" cy="332.95" r="4" /><circle class="cls-1" cx="208.13" cy="374.58" r="4" />
+        <circle class="cls-1" cx="115.25" cy="423.95" r="4" /><circle class="cls-1" cx="61.38" cy="449.27" r="4" /><circle class="cls-1" cx="48.13" cy="474.83" r="4" />
+        <circle class="cls-1" cx="88.17" cy="519" r="4" /><circle class="cls-1" cx="153.56" cy="573.62" r="4" /><circle class="cls-1" cx="254.22" cy="680.98" r="4" />
+        <circle class="cls-1" cx="363.32" cy="759.26" r="4"/><circle class="cls-1" cx="390.57" cy="737.83" r="4" /><circle class="cls-1" cx="448.86" cy="696.72" r="4" />
+        <circle class="cls-1" cx="471" cy="653.08" r="4" /><circle class="cls-1" cx="482.92" cy="559.49" r="4" /><circle class="cls-1" cx="495.85" cy="543.25" r="4" />
+        <circle class="cls-1" cx="495.57" cy="519.16" r="4" /><circle class="cls-1" cx="512.25" cy="496.66" r="4" /><circle class="cls-1" cx="526.73" cy="460.33" r="4" />
+        <circle class="cls-1" cx="514.4" cy="421.83" r="4" /><circle class="cls-1" cx="502.4" cy="397.2" r="4" /><circle class="cls-1" cx="504.68" cy="373.9" r="4" />
+        <circle class="cls-1" cx="505.32" cy="340.54" r="4" /><circle class="cls-1" cx="502.44" cy="322.35" r="4" /><circle class="cls-1" cx="521.53" cy="309.62" r="4" />
+        <circle class="cls-1" cx="524.44" cy="294.68" r="4" /><circle class="cls-1" cx="517.56" cy="281.51" r="4" /><circle class="cls-1" cx="505.4" cy="249.68" r="4" />
+        <circle class="cls-1" cx="507.15" cy="230.18" r="4" /><circle class="cls-1" cx="518.08" cy="219.18" r="4" /><circle class="cls-1" cx="516.55" cy="202.15" r="4" />
+        <circle class="cls-1" cx="509.72" cy="150.18" r="4" /><circle class="cls-1" cx="483.99" cy="98.02" r="4" /><circle class="cls-1" cx="396.47" cy="50.59" r="4" />
+        <circle class="cls-1" cx="329.45" cy="51.43" r="4" /><circle class="cls-1" cx="222.44" cy="130.51" r="4" />
+        <polyline [ngClass]="{'constelation':!globals.animated}" points="61.38,449.27 115.25,423.95 208.13,374.58 234.5,332.95 221.17,260.83 209.15,171.4 "></polyline>
+        <polyline [ngClass]="{'constelation':!globals.animated}" points="363.32,759.26 254.22,680.98 153.56,573.62 88.17,519 48.13,474.83 61.38,449.27 "></polyline>
+        <polyline [ngClass]="{'constelation':!globals.animated}" points="363.32,759.26 390.57,737.83 448.86,696.72 471,653.08 482.92,559.49 495.85,543.25 "></polyline>
+        <polyline [ngClass]="{'constelation':!globals.animated}" points="502.4,397.2 514.4,421.83 526.73,460.33 512.25,496.66 495.57,519.16 495.85,543.25 "></polyline>
+        <polyline [ngClass]="{'constelation':!globals.animated}" points="502.4,397.2 504.68,373.9 505.32,340.54 502.44,322.35 521.53,309.62 524.44,294.68 "></polyline>
+        <polyline [ngClass]="{'constelation':!globals.animated}"points="524.44,294.68 517.56,281.51 505.4,249.68 507.15,230.18 518.08,219.18 516.55,202.15 "></polyline>
+        <polyline [ngClass]="{'constelation':!globals.animated}" points="516.55,202.15 509.72,150.18 483.99,98.02 396.47,50.59 329.45,51.43 222.44,130.51 209.15,171.4"></polyline>
+        </svg>
+        <img id="image" (load)="imageLoaded()" class="image" src="assets/images/Daryl's-works/The-Profet.png" />
+      </div>
+    </div>
+    <div class="animated-text col-md-6">
+      <h3 [@titleAnimation]="first_title" (@titleAnimation.done)="showTextAnimation($event, 2)" class="first-animated">First We Imagine it</h3>
+      <h3 [@titleAnimation]="third_title" (@titleAnimation.done)="endAnimation($event)" class="third-animated">Then We Create It</h3>
+    </div>
+  </div>
+  <div [style.display]="second_display" class="row about-us">
+    <div id="after-animation" class="main-header">
+      <h1 class="first-title">We are
+        <span>Twin Moon <span>A</span><span>R</span><span>T</span>
+        </span>
+      </h1>
+      <h2 class="second-title">A Company made by Artists for Artists</h2>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+</div>

@@ -1,5 +1,8 @@
 # TwinMoon
 
+Twin Moon Art Company Website developed with angular 2 int the front-end and a node.js server with mongodb as back-end
+Still in process...
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 
 ## Development server

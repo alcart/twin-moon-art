@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 form-wrapper">
+      <form [formGroup]="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name" class="input-title">Tell Us Your Name</label>
+          <input formControlName="name" type="text" placeholder="Your Name" id="name" class="form-control" required/>
+          <label class="error" *ngIf="formErrors.name">{{formErrors.name}}</label>
+        </div>
+        <div class="form-group">
+          <label for="email" class="input-title">What is your email?</label>
+          <input formControlName="email" id="email" class="form-control" type="email" placeholder="Your email here" required />
+          <label class="error" *ngIf="formErrors.email">{{formErrors.email}}</label>
+        </div>
+        <div class="form-group">
+          <label for="description" class="input-title">Describe what you want</label>
+          <textarea formControlName="description" id="description" type="text" class="form-control" class="description"
+          placeholder="Describe us the your wish here" required ></textarea>
+          <label class="error" *ngIf="formErrors.description">{{formErrors.description}}</label>
+        </div>
+        <button type="submit" (click)="sunmitInfo($event)" class="submit-button">
+          <i class="fa fa-envelope"></i>
+          Send Info</button>
+      </form>
+    </div>
+    <!-- <div class="other-contact">
+      <h3>You can also call us here</h3>
+    </div> -->
+  </div>
+
+</div>
